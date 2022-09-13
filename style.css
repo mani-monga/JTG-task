@@ -1,0 +1,596 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+*{
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+body.overlayShow{
+    height: 100vh;
+    overflow: hidden;
+}
+
+button{
+    cursor: pointer;
+}
+input:focus , #userMessage:focus{
+    outline: none;
+}
+
+.LandingPageWrapper{
+    background-color:#1AC073;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.navbarWrapper {
+    display: flex;
+    height: 80px;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+}
+
+.navbarLeft{
+    font-family: fantasy;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.012em;
+    text-align: left;
+}
+.navbarList ul{
+    display: flex;
+    gap: 40px;
+
+}
+.navbarList ul li{
+    list-style: none;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.012em;
+    text-align: left;
+    
+}
+
+li{
+    cursor: pointer;
+    transition: 0.5s;
+}
+li:hover{
+    opacity: 0.7;
+}
+.navbarRight{
+    display: flex;
+    gap: 35px;
+}
+
+.landingPageContentWrapper{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 150px;
+}
+
+.ContentLeftWrapper{
+    flex-basis: 40%;
+    color: white;
+    display: flex;
+    gap: 35px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ContentLeftWrapper h4{
+    font-size: 70px;
+    font-weight: 400;
+    line-height: 82px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.ContentLeftWrapper span{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.012em;
+    text-align: left;
+}
+.ContentLeftWrapper .LandingInputWrapper{
+    display: flex;
+    height: 60px;
+    width: 400px;
+}
+
+.ContentLeftWrapper .LandingInputWrapper input{
+    width: 75%;
+    border-radius:10px 0 0 10px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.012em;
+    padding: 19px 22px;
+}
+
+.ContentLeftWrapper .LandingInputWrapper button{
+    background: #F3BA00;
+    width: 25%;
+    border-radius:0 10px 10px 0;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.012em;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.MenuItems{
+    background: #F7F8FA;
+}
+
+.MenuItemsCardWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 130px;
+    gap: 2%;
+    row-gap: 40px;
+    justify-content: space-between;
+}
+
+.ItemCardImage img {
+    height: 100%;
+}
+
+.MenuItems > h4{
+    padding: 100px 130px 60px 130px;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 24px;
+    letter-spacing: -0.012em;
+    text-align: left;
+}
+
+.MenuItemCard {
+    background: white;
+    border-radius: 10px 10px 0 0;
+}
+
+.ItemCardImage {
+    height: 250px;
+}
+
+.ItemCardInfo1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.ItemCardDesc {
+    width: 90%;
+    margin: 15.5px auto;
+}
+
+.ItemCardInfo2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ItemCardInfo2 div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    font-size: 12px;
+}
+
+span.ItemRating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F7F8FA;
+    padding: 0 4px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
+}
+
+div.ItemCookingTime {
+    background: #BEBEBE;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    padding: 0 5px;
+}
+
+div.ItemCookingTime span{
+    background-color: white;
+    border-radius: 5px;
+    padding: 0 2px;
+}
+
+.ItemCardInfo2 button{
+    border: none;
+    height: 20px;
+    cursor: pointer;
+}
+
+.ItemCardInfo2 button img{
+    height: 100%;
+    border-radius: 5px;
+}
+
+
+.MenuItems h4.menuCaourselTitle{
+    text-align: center;
+}
+
+
+.menuCarouselPopular{
+    position: relative;
+}
+
+
+.menuCaouselItemWrapper{
+    display: flex;
+    overflow-x:hidden;
+    width: 70%;
+    margin: auto;
+    gap: 50px;
+}
+
+.menuCarouselPopular > button{
+    border: none;
+    background: transparent;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 40%;
+    background-color: #1AC073;
+    border: 3px solid #1AC073;
+    border-radius: 50%;
+}
+.menuCarouselPopular > button svg{
+    color: white;
+    transform:scale(3.5);
+}
+.menuCarouselPopular > button.disable{
+    background-color: white;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+.menuCarouselPopular > button.disable svg{
+    color: #1AC073;
+}
+
+.prevSlide{
+    left: 8%;
+}
+.nextSlide{
+    right: 8%;
+}
+.nextSlide svg{
+    padding-left: 1px;
+}
+.prevSlide svg{
+    padding-right: 1px;
+}
+
+.menuCarouselPopular .MenuItemCard{
+    box-shadow: 0px 0px 1px rgba(187, 187, 187, 0.25);
+}
+.RequestDishCTA{
+   text-align: center;
+   padding: 80px 0;
+}
+.RequestDishCTA button{
+    height: 50px;
+    width: 210px;
+    border-radius: 10px;
+    border: none;
+    background: #1AC073;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: -0.012em;
+}
+
+.videoDivWrapper{
+    width: 100%;
+    
+    background: linear-gradient(
+        to bottom,
+        #FAFAFA 0%,
+        #FAFAFA 60%,                                                                 
+        #C7EACC 60%,
+        #C7EACC 100%
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 80px 0 130px 0;
+}
+.videoDesc{
+    flex-basis: 20%;
+    width: 65%;
+}
+.videoDesc h4{
+    width: 70%;
+    margin: auto    ;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 57px;
+    letter-spacing: 0.20000000298023224px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.videoDesc span{
+    width: 50%;
+    display: block;
+    margin: auto;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.20000000298023224px;
+    text-align: center;
+
+}
+.videoContentWrapper{
+    position: relative;
+    width: 60%;
+    height: 400px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.videoContentWrapper button{
+    position: absolute;
+    border: none;
+    background-color: #1AC073;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    z-index: 1;
+}
+.videoContentWrapper button svg{
+    color: white;
+    font-size: 50px;
+    padding-left: 8px;
+}
+.videoContentWrapper video{
+    height: 100%;
+    cursor: pointer;
+}
+
+.formSectionWrapper{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 130px;
+    background-color: #F7F8FA;
+    gap: 60px;
+}
+
+.formInputFieldWrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    gap: 25px;
+}
+.formInputFieldWrapper .textDetails{
+    width: 60%;
+}
+.formInputFieldWrapper .textDetails h4{
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.012em;
+    text-align: left;
+}
+.formInputFieldWrapper .textDetails span{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.012em;
+    text-align: left;
+}
+.formInputFieldWrapper .inputName{
+    display: flex;
+    justify-content: space-between;
+}
+.formInputFieldWrapper .inputName input{
+    width: 45%;
+    height: 35px;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.012em;
+    text-align: left;
+    border-radius: 10px;
+}
+
+
+
+.formInputFieldWrapper #userMessage{
+    width: 100%;
+    resize: none;
+    box-shadow: 0px 0px 1px rgb(0 0 0 / 25%);
+    border-radius: 10px;
+    font-size: 16px;
+    border: none;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.formInputFieldWrapper button{
+    width: 30%;
+    padding: 20px;
+    border: none;
+    color: white;
+    background-color: #1AC073;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+footer{
+    background: #1AC073;
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 130px;
+}
+.footerSection{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid white;
+}
+.footerSection .footerLeftWrapper{
+    font-family: fantasy;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.012em;
+    text-align: left;
+}
+.footerSection .footerList ul{
+    display: flex;
+    gap: 20px;
+}
+.footerSection .footerList ul li{
+    list-style: none;
+}
+/* Modal Overlay */
+
+.modalWrapper {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    z-index: 2;
+}
+
+
+.modalOverlay {
+    background: rgba(0,0,0,0.35);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.modalContent {
+    background: #F7F8FA;
+    width: 93%;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+    border-radius: 20px;
+    gap: 55px;
+    /* margin-top: 130px; */
+    box-sizing: border-box;
+}
+
+.modalContent img{
+    height: 225px;
+}
+.modalContent .modalContentInfo{
+    text-align: center;
+
+}
+.modalContent h4{
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.012em;
+    margin-bottom: 14px;
+}
+
+.modalContent span{
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.012em;
+    color:#AAA7A7;
+
+}
+
+.modalContent button{
+    background: #1AC073;
+    border: none;
+    color: white;
+    width: 210px;
+    padding: 15px 0;
+    border-radius: 10px;
+}
+
+
+.requestDish {
+    display:flex;
+    flex-direction:column;
+    width: 80%;
+    justify-content: center;
+    gap: 37px;
+}
+
+.requestDish h4 {
+    text-align: center;
+    margin: 58px;
+}
+
+.modalInputWrapper {
+    display: flex;
+    flex-direction:column;
+    position: relative;
+    justify-content: flex-end;
+    height: 60px;
+}
+.modalInputWrapper label{
+    position: absolute;
+    top: 0;
+    left: 4px;
+}
+.modalInputWrapper input{
+    padding: 10px;
+    border: none;
+    background: #F2F2F2;
+    border-radius: 10px;
+}
+.modalInputWrapper input::placeholder{
+    color: #9E9E9E;
+}
+
+.requestDish .modalBtnGrp{
+    margin:80
+    px auto;
+}
+
+.requestDish .modalBtnGrp button{
+    margin: 0 10px;
+}
+
+.requestDish .modalBtnGrp #cancelSubmit{
+    background-color: white;
+    color: #1AC073;
+    border: 2px solid #1AC073;
+}

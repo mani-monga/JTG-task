@@ -127,7 +127,12 @@ li:hover{
     border: none;
     cursor: pointer;
 }
-
+.ContentRightWrapper{
+    flex-basis: 40%;
+}
+.ContentRightWrapper img{
+    width: 100%;
+}
 .MenuItems{
     background: #F7F8FA;
 }
@@ -593,4 +598,130 @@ footer{
     background-color: white;
     color: #1AC073;
     border: 2px solid #1AC073;
+}
+
+
+@media ( min-width:768px) and (max-width: 1023px){
+
+    .navbarList ul{
+        gap: 20px;
+    }
+
+    .landingPageContentWrapper{
+        margin-top: 50px;
+    }
+
+    .ContentLeftWrapper h4{
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .ContentLeftWrapper .LandingInputWrapper{
+        width: 300px;
+        height: 45px;
+    }
+    .MenuItems > h4{
+        padding: 60px 0;
+        width: 80%;
+        margin: auto;
+    }
+    .MenuItemsCardWrapper{
+        margin: 0 auto;
+        width: 80%;
+    }
+    .menuCaouselItemWrapper{
+        width: 79%;
+    }
+    .menuCarouselPopular > button{
+        width: 50px;
+        height: 50px;
+    }
+    .menuCarouselPopular > button svg{
+        transform: scale(2.5);
+    }
+    .nextSlide{
+        right: 3%;
+    }
+    .nextSlide svg{
+        padding-left: 2px;
+    }
+    .prevSlide{
+        left: 3%;
+    }
+    .prevSlide svg{
+        padding-right: 2px;
+    }
+    .videoDesc{
+        width: 100%;
+    } 
+
+    .formSectionWrapper{
+        padding: 20px;
+    }
+    .formInputFieldWrapper{
+        flex-basis: 40%;
+    }
+    .formInputFieldWrapper .textDetails{
+        width: 100%;
+    }
+    .formInputFieldWrapper .inputName input{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .formInputFieldWrapper .inputName{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .formInputFieldWrapper button{
+        width: 40%;
+        padding: 15px;
+    }
+    .formImageWrapper{
+        flex-basis: 50%;
+    }
+    .formImageWrapper img{
+        width: 100%;
+    }
+}
+
+@media screen and ( max-width:768px){
+    .navbarWrapper{
+        position: relative;
+        justify-content: space-between;
+        padding: 0 10px;
+        box-sizing: border-box;
+        height: 50px;
+    }
+    .navbarList{
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background: rgb(0 0 0 / 10%);
+    }
+    .navbarList ul{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding: 10px;
+    }
+    .landingPageContentWrapper{
+        flex-direction: column-reverse;
+    }
+    .videoContentWrapper{
+        width: 80%;
+    }
+    .videoContentWrapper video{
+        width: 100%;
+        height: auto;
+    }
+    .formImageWrapper{
+        flex-basis: 50%;
+    }
+    .formImageWrapper img{
+        width: 100%;
+    }
+    .footerSection{
+        flex-direction: column;
+    }
 }

@@ -67,6 +67,17 @@ li:hover{
     gap: 35px;
 }
 
+.navbarRight svg {
+    color: white;
+    font-weight: 900;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
 .landingPageContentWrapper{
     display: flex;
     justify-content: space-evenly;
@@ -696,7 +707,8 @@ footer{
         top: 50px;
         left: 0;
         width: 100%;
-        background: rgb(0 0 0 / 10%);
+        background: rgb(0 0 0 / 50%);
+        display: none;
     }
     .navbarList ul{
         flex-direction: column;
@@ -705,23 +717,141 @@ footer{
         gap: 20px;
         padding: 10px;
     }
+    .navbarRight{
+        gap: 15px;
+        padding-right: 40px;
+    }
+    .navbarRight svg.showMenu{
+        display: block;
+    }
     .landingPageContentWrapper{
         flex-direction: column-reverse;
+        margin: 0;
+        padding: 50px 0;
+    }
+    .LandingImageWrapper{
+        width: 80%;
+        margin: auto;
+    }
+    .ContentLeftWrapper{
+        width: 90%;
+        margin:20px auto;
+    }
+    .ContentLeftWrapper h4{
+        font-size: 50px;
+        text-align: center;
+        line-height: 60px;
+    }
+    .ContentLeftWrapper span{
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .ContentLeftWrapper .LandingInputWrapper{
+        width: 80%;
+        height: 45px;
+        margin: auto;
+    }
+
+    .MenuItems > h4{
+        padding: 40px 0;
+        text-align: center;
+    }
+    .MenuItemsCardWrapper{
+        margin: 0;
+        justify-content: center;
+    }
+
+    .menuCarouselPopular > button{
+        width: 40px;
+        height: 40px;
+    }
+    .menuCarouselPopular > button svg{
+        transform: scale(1.5);
+    }
+    .nextSlide{
+        right: 5%;
+    }
+    .nextSlide svg{
+        padding-left: 2px;
+    }
+    .prevSlide{
+        left: 5%;
+    }
+    .prevSlide svg{
+        padding-right: 2px;
+    }
+    .menuCaouselItemWrapper{
+        width: 65%;
+    }
+
+    .RequestDishCTA{
+        padding: 40px 0;
+    }
+    .videoDivWrapper{
+        padding: 50px 0;
+        background: linear-gradient(to bottom,#FAFAFA 0%,#FAFAFA 70%,#C7EACC 70%,#C7EACC 100%)
+    }
+    .videoDesc{
+        width: 100%;
+    }
+    .videoDesc > h4{
+        width: 90%;
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .videoDesc > span{
+        width: 90%;
     }
     .videoContentWrapper{
         width: 80%;
+        height: auto;
+    }
+    .videoContentWrapper button{
+        width: 80px;
+        height: 80px;
     }
     .videoContentWrapper video{
         width: 100%;
         height: auto;
     }
+    .formSectionWrapper{
+        padding: 50px 10px;
+        flex-direction: column-reverse;
+        height: auto;
+    }
     .formImageWrapper{
-        flex-basis: 50%;
+        flex-basis: 40%;
     }
     .formImageWrapper img{
         width: 100%;
     }
-    .footerSection{
+    .formInputFieldWrapper{
+        width: 90%;
+        margin: auto;
+    }
+    .formInputFieldWrapper .textDetails{
+        width: 100%;
+    }
+    .formInputFieldWrapper .inputName{
         flex-direction: column;
+        gap: 20px;
+    }
+    .formInputFieldWrapper .inputName input{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .formInputFieldWrapper button{
+        width: 50%;
+        padding: 15px;
+        margin: auto;
+    }
+    .footerSection{
+        /* flex-direction: column; */
+        padding: 0 10px;
+        padding-bottom: 10px;
+    }
+    .footerList{
+        display: none;
     }
 }

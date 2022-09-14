@@ -123,6 +123,22 @@ function videoEvents(){
 }
 
 
+function hamburgerMenuCTA(){
+
+    jQuery(document).on('click' , '.showMenu' , function(){
+        jQuery('.navbarList').slideDown(500);
+        jQuery(this).hide();
+        jQuery('.closeMenu').show(500);
+    })
+    
+    jQuery(document).on('click' , '.closeMenu' , function(){
+        jQuery('.navbarList').slideUp(500);
+        jQuery(this).hide();
+        jQuery('.showMenu').show(500);
+    })
+
+}
+
 
 jQuery(function() {
    
@@ -130,5 +146,6 @@ jQuery(function() {
     carouselEvents();    
     videoEvents();
     modalEvents();
+    hamburgerMenuCTA();
     
  });

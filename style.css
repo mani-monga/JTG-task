@@ -789,7 +789,7 @@ footer{
         padding-right: 2px;
     }
     .menuCaouselItemWrapper{
-        width: 65%;
+        width: 80%;
     }
 
     .RequestDishCTA{
@@ -884,7 +884,27 @@ footer{
     }
     
 }
-
+@media screen and (max-width:425px){
+    .menuCaouselItemWrapper{
+        max-width: 277px;
+    }
+}
+@media screen and ( max-width:375px){
+    .MenuItemCard{
+       width: 200px;
+    }
+    .MenuItemCard .ItemCardImage{
+        width: 200px;
+        height: auto;
+    }
+    .MenuItemCard .ItemCardImage img{
+        height: auto;
+        width: 100%;
+    }
+    .menuCaouselItemWrapper{
+        max-width: 200px;
+    }
+}
 @media screen and ( min-width:1440px){
 
     .MenuItems .MenuItemsTitle{

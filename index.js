@@ -10,13 +10,15 @@ let modalAddToCartHtml = `
 let requestDishHtml = `
 <div class="requestDish">
     <h4>Request a Dish</h4>
-    <div class="modalInputWrapper">
-        <label for="dishName">Name*</label>
-        <input name="dishName" type="text" placeholder="Enter name of the dish">
-    </div>
-    <div class="modalInputWrapper">
-        <label for="ImageUrl">Upload an image</label>
-        <input name="ImageUrl" type="text" placeholder="Paste a URL">
+    <div class="inputContainer">
+        <div class="modalInputWrapper">
+            <label for="dishName">Name*</label>
+            <input name="dishName" type="text" placeholder="Enter name of the dish">
+        </div>
+        <div class="modalInputWrapper">
+            <label for="ImageUrl">Upload an image</label>
+            <input name="ImageUrl" type="text" placeholder="Paste a URL">
+        </div>
     </div>
     <div class="modalBtnGrp">
         <button class="closeModal" id="cancelSubmit">Cancel</button>

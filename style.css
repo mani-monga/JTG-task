@@ -10,9 +10,12 @@ body.overlayShow{
     height: 100vh;
     overflow: hidden;
 }
-
-button{
+li ,  button{
     cursor: pointer;
+    transition: 0.5s;
+}
+li:hover , button:hover{
+    opacity: 0.8;
 }
 input:focus , #userMessage:focus{
     outline: none;
@@ -43,7 +46,6 @@ input:focus , #userMessage:focus{
 .navbarList ul{
     display: flex;
     gap: 40px;
-
 }
 .navbarList ul li{
     list-style: none;
@@ -52,16 +54,8 @@ input:focus , #userMessage:focus{
     line-height: 20px;
     letter-spacing: -0.012em;
     text-align: left;
-    
 }
 
-li{
-    cursor: pointer;
-    transition: 0.5s;
-}
-li:hover{
-    opacity: 0.7;
-}
 .navbarRight{
     display: flex;
     gap: 35px;
@@ -81,7 +75,7 @@ li:hover{
 .landingPageContentWrapper{
     display: flex;
     justify-content: space-evenly;
-    margin-top: 150px;
+    padding: 150px 0 20px 0;
 }
 
 .ContentLeftWrapper{
@@ -146,12 +140,15 @@ li:hover{
 }
 .MenuItems{
     background: #F7F8FA;
+    width: 100%;
+    margin: auto;
 }
 
 .MenuItemsCardWrapper {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 130px;
+    width: 80%;
+    margin: auto;
     gap: 2%;
     row-gap: 40px;
     justify-content: space-between;
@@ -162,8 +159,10 @@ li:hover{
 }
 
 .MenuItems > h4{
-    padding: 100px 130px 60px 130px;
+    padding: 100px 0 60px 0;
     font-size: 40px;
+    width: 80%;
+    margin: auto;
     font-weight: 800;
     line-height: 24px;
     letter-spacing: -0.012em;
@@ -254,6 +253,7 @@ div.ItemCookingTime span{
     display: flex;
     overflow-x:hidden;
     width: 70%;
+    max-width: 931px;
     margin: auto;
     gap: 50px;
 }
@@ -567,11 +567,12 @@ footer{
     width: 80%;
     justify-content: center;
     gap: 37px;
+    padding: 5%;
+    box-sizing: border-box;
 }
 
 .requestDish h4 {
     text-align: center;
-    margin: 58px;
 }
 
 .modalInputWrapper {
@@ -597,10 +598,14 @@ footer{
 }
 
 .requestDish .modalBtnGrp{
-    margin:80
-    px auto;
+    margin:auto;
 }
-
+.requestDish .inputContainer{
+    padding: 8% 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
 .requestDish .modalBtnGrp button{
     margin: 0 10px;
 }
@@ -612,14 +617,14 @@ footer{
 }
 
 
-@media ( min-width:768px) and (max-width: 1023px){
+@media ( min-width:768px) and (max-width: 1024px){
 
     .navbarList ul{
         gap: 20px;
     }
 
     .landingPageContentWrapper{
-        margin-top: 50px;
+        padding-top: 50px;
     }
 
     .ContentLeftWrapper h4{
@@ -633,14 +638,16 @@ footer{
     .MenuItems > h4{
         padding: 60px 0;
         width: 80%;
+        max-width: 604px;
         margin: auto;
     }
     .MenuItemsCardWrapper{
         margin: 0 auto;
+        max-width: 604px;
         width: 80%;
     }
     .menuCaouselItemWrapper{
-        width: 79%;
+        max-width: 604px;
     }
     .menuCarouselPopular > button{
         width: 50px;
@@ -650,13 +657,13 @@ footer{
         transform: scale(2.5);
     }
     .nextSlide{
-        right: 3%;
+        right: 8%;
     }
     .nextSlide svg{
         padding-left: 2px;
     }
     .prevSlide{
-        left: 3%;
+        left: 8%;
     }
     .prevSlide svg{
         padding-right: 2px;
@@ -707,7 +714,7 @@ footer{
         top: 50px;
         left: 0;
         width: 100%;
-        background: rgb(0 0 0 / 50%);
+        background: rgb(0 0 0 / 90%);
         display: none;
     }
     .navbarList ul{
@@ -758,7 +765,7 @@ footer{
         text-align: center;
     }
     .MenuItemsCardWrapper{
-        margin: 0;
+        margin: auto;
         justify-content: center;
     }
 
@@ -853,5 +860,49 @@ footer{
     }
     .footerList{
         display: none;
+    }
+
+    .modalBtnGrp{
+        display: flex;
+        width: 100%;
+    }
+    .modalContent img {
+        height: 130px;
+    }
+    .modalContent .modalContentInfo{
+        width: 90%;
+    }
+    .modalContent  h4{
+        font-size: 30px;
+        letter-spacing: -0.032em;
+    }
+    .modalContent span{
+        font-size: 16px;
+    }
+    .requestDish .modalBtnGrp button{
+        padding: 10px;
+    }
+    
+}
+
+@media screen and ( min-width:1440px){
+
+    .MenuItems .MenuItemsTitle{
+        width: 85%;
+    }
+    .MenuItemsCardWrapper{
+        justify-content: space-between;
+        margin: auto;
+        width: 85%;
+    }
+
+}
+
+@media screen and ( min-width:1770px){
+    .MenuItems .MenuItemsTitle{
+        max-width: 1430px;
+    }
+    .MenuItemsCardWrapper{
+        max-width: 1430px;
     }
 }

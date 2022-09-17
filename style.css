@@ -172,6 +172,7 @@ input:focus , #userMessage:focus{
 .MenuItemCard {
     background: white;
     border-radius: 10px 10px 0 0;
+    transition: 0.5s;
 }
 
 .ItemCardImage {
@@ -256,6 +257,7 @@ div.ItemCookingTime span{
     max-width: 931px;
     margin: auto;
     gap: 50px;
+    padding: 40px;
 }
 
 .menuCarouselPopular > button{
@@ -265,23 +267,31 @@ div.ItemCookingTime span{
     height: 70px;
     position: absolute;
     top: 40%;
-    background-color: #1AC073;
+    background-color: white;
     border: 3px solid #1AC073;
     border-radius: 50%;
+    transition: 0.5s;
 }
 .menuCarouselPopular > button svg{
-    color: white;
+    color: #1AC073;
     transform:scale(3.5);
+    transition: 0.5s;
 }
 .menuCarouselPopular > button.disable{
-    background-color: white;
     cursor: not-allowed;
-    pointer-events: none;
+    
 }
 .menuCarouselPopular > button.disable svg{
     color: #1AC073;
 }
-
+.menuCarouselPopular > button:hover{
+    background-color: #1AC073;
+    border-color: #1AC073;
+}
+.menuCarouselPopular > button:hover svg{
+    color: white;
+    
+}
 .prevSlide{
     left: 8%;
 }
@@ -295,8 +305,9 @@ div.ItemCookingTime span{
     padding-right: 1px;
 }
 
-.menuCarouselPopular .MenuItemCard{
-    box-shadow: 0px 0px 1px rgba(187, 187, 187, 0.25);
+.menuCaouselItemWrapper .MenuItemCard:hover{
+    filter: drop-shadow(0px 6px 20px rgba(0, 0, 0, 0.14));
+    cursor: default;
 }
 .RequestDishCTA{
    text-align: center;
@@ -366,20 +377,13 @@ div.ItemCookingTime span{
     justify-content: center;
     align-items: center;
 }
-.videoContentWrapper button{
+.videoContentWrapper img{
     position: absolute;
-    border: none;
-    background-color: #1AC073;
     width: 100px;
     height: 100px;
-    border-radius: 50%;
     z-index: 1;
 }
-.videoContentWrapper button svg{
-    color: white;
-    font-size: 50px;
-    padding-left: 8px;
-}
+
 .videoContentWrapper video{
     height: 100%;
     cursor: pointer;
@@ -434,6 +438,7 @@ div.ItemCookingTime span{
     letter-spacing: -0.012em;
     text-align: left;
     border-radius: 10px;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
 }
 
 
@@ -441,7 +446,7 @@ div.ItemCookingTime span{
 .formInputFieldWrapper #userMessage{
     width: 100%;
     resize: none;
-    /* box-shadow: 0px 0px 1px rgb(0 0 0 / 25%); */
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     font-size: 16px;
     border: none;
@@ -617,89 +622,7 @@ footer{
 }
 
 
-@media ( min-width:768px) and (max-width: 1024px){
 
-    .navbarList ul{
-        gap: 20px;
-    }
-
-    .landingPageContentWrapper{
-        padding-top: 50px;
-    }
-
-    .ContentLeftWrapper h4{
-        font-size: 40px;
-        line-height: 40px;
-    }
-    .ContentLeftWrapper .LandingInputWrapper{
-        width: 300px;
-        height: 45px;
-    }
-    .MenuItems > h4{
-        padding: 60px 0;
-        width: 80%;
-        max-width: 604px;
-        margin: auto;
-    }
-    .MenuItemsCardWrapper{
-        margin: 0 auto;
-        max-width: 604px;
-        width: 80%;
-    }
-    .menuCaouselItemWrapper{
-        max-width: 604px;
-    }
-    .menuCarouselPopular > button{
-        width: 50px;
-        height: 50px;
-    }
-    .menuCarouselPopular > button svg{
-        transform: scale(2.5);
-    }
-    .nextSlide{
-        right: 8%;
-    }
-    .nextSlide svg{
-        padding-left: 2px;
-    }
-    .prevSlide{
-        left: 8%;
-    }
-    .prevSlide svg{
-        padding-right: 2px;
-    }
-    .videoDesc{
-        width: 100%;
-    } 
-
-    .formSectionWrapper{
-        padding: 60px;
-    }
-    .formInputFieldWrapper{
-        flex-basis: 40%;
-    }
-    .formInputFieldWrapper .textDetails{
-        width: 100%;
-    }
-    .formInputFieldWrapper .inputName input{
-        width: 100%;
-        box-sizing: border-box;
-    }
-    .formInputFieldWrapper .inputName{
-        flex-direction: column;
-        gap: 20px;
-    }
-    .formInputFieldWrapper button{
-        width: 40%;
-        padding: 15px;
-    }
-    .formImageWrapper{
-        flex-basis: 50%;
-    }
-    .formImageWrapper img{
-        width: 100%;
-    }
-}
 
 @media screen and ( max-width:768px){
     .navbarWrapper{
@@ -891,8 +814,11 @@ footer{
     .menuCaouselItemWrapper{
         max-width: 277px;
     }
-    
+    .ContentLeftWrapper .LandingInputWrapper{
+        width: 100%;
+    }
 }
+
 @media screen and ( max-width:375px){
     .MenuItemCard{
        width: 200px;
@@ -910,6 +836,90 @@ footer{
     }
     
 }
+@media ( min-width:768px) and (max-width: 1024px){
+
+    .navbarList ul{
+        gap: 20px;
+    }
+
+    .landingPageContentWrapper{
+        padding-top: 50px;
+    }
+
+    .ContentLeftWrapper h4{
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .ContentLeftWrapper .LandingInputWrapper{
+        width: 300px;
+        height: 45px;
+    }
+    .MenuItems > h4{
+        padding: 60px 0;
+        width: 80%;
+        max-width: 604px;
+        margin: auto;
+    }
+    .MenuItemsCardWrapper{
+        margin: 0 auto;
+        max-width: 604px;
+        width: 80%;
+    }
+    .menuCaouselItemWrapper{
+        max-width: 604px;
+    }
+    .menuCarouselPopular > button{
+        width: 50px;
+        height: 50px;
+    }
+    .menuCarouselPopular > button svg{
+        transform: scale(2.5);
+    }
+    .nextSlide{
+        right: 4%;
+    }
+    .nextSlide svg{
+        padding-left: 2px;
+    }
+    .prevSlide{
+        left: 4%;
+    }
+    .prevSlide svg{
+        padding-right: 2px;
+    }
+    .videoDesc{
+        width: 100%;
+    } 
+
+    .formSectionWrapper{
+        padding: 60px;
+    }
+    .formInputFieldWrapper{
+        flex-basis: 40%;
+    }
+    .formInputFieldWrapper .textDetails{
+        width: 100%;
+    }
+    .formInputFieldWrapper .inputName input{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .formInputFieldWrapper .inputName{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .formInputFieldWrapper button{
+        width: 40%;
+        padding: 15px;
+    }
+    .formImageWrapper{
+        flex-basis: 50%;
+    }
+    .formImageWrapper img{
+        width: 100%;
+    }
+}
+
 @media screen and ( min-width:1440px){
 
     .MenuItems .MenuItemsTitle{

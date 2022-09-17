@@ -103,7 +103,7 @@ function carouselEvents(){
 
 function videoEvents(){
 
-    jQuery(document).on('click' , '.videoContentWrapper button' , function(){
+    jQuery(document).on('click' , '.videoContentWrapper img' , function(){
         var video = jQuery(this).closest('.videoContentWrapper').find('.sampleVideo').get(0);
         if(video.paused)
         {
@@ -116,11 +116,11 @@ function videoEvents(){
         var video = jQuery(this).get(0);
         if(!video.paused)
         {
-            jQuery('.videoContentWrapper button').show(500);
+            jQuery('.videoContentWrapper img').show(500);
             video.pause();
         }
         else{
-            jQuery('.videoContentWrapper button').hide(500);
+            jQuery('.videoContentWrapper img').hide(500);
             video.play();
         };      
     })

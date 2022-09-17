@@ -57,6 +57,8 @@ function carouselEvents(){
     function resetValues(){
         jQuery('.menuCarouselPopular button').removeClass('disable')
     }
+    
+    var stack = Math.floor(jQuery('.menuCaouselItemWrapper').innerWidth() / jQuery('.MenuItemCard').innerWidth()); 
 
     jQuery(document).on('click' , '.prevSlide' , function(){
 
@@ -65,7 +67,7 @@ function carouselEvents(){
             jQuery(this).addClass('disable')
         }
         if(index > 0){
-            if(index === totalCards -2) --index;
+            if(index === totalCards -2 && stack === 3) --index;
             --index;   
             console.log(index)
             jQuery('.menuCaouselItemWrapper').animate({
@@ -79,7 +81,8 @@ function carouselEvents(){
 
         
         resetValues();
-        if(index === totalCards - 4){
+        
+        if(index === totalCards - (stack + 1)){
             jQuery(this).addClass('disable')
         }
 

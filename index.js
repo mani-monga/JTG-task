@@ -37,7 +37,7 @@ function modalEvents(){
         jQuery('.modalContent').html(modalAddToCartHtml)
         jQuery('body').addClass('overlayShow');
     })
-    jQuery(document).on('click' , '.closeModal' , function(){
+    jQuery(document).on('click' , '.modalContent button' , function(){
         jQuery('.modalWrapper').fadeOut(500);
         jQuery('.modalContent').empty();
         jQuery('body').removeClass('overlayShow');

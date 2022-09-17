@@ -861,7 +861,10 @@ footer{
     .footerList{
         display: none;
     }
-
+    .modalContent{
+        min-height: auto;
+        padding: 30px;
+    }    
     .modalBtnGrp{
         display: flex;
         width: 100%;
@@ -888,6 +891,7 @@ footer{
     .menuCaouselItemWrapper{
         max-width: 277px;
     }
+    
 }
 @media screen and ( max-width:375px){
     .MenuItemCard{
@@ -904,6 +908,7 @@ footer{
     .menuCaouselItemWrapper{
         max-width: 200px;
     }
+    
 }
 @media screen and ( min-width:1440px){
 

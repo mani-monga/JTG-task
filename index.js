@@ -47,9 +47,8 @@ function modalEvents(){
         document.querySelectorAll('.modalContent div').forEach(function(item){
             item.classList.remove('active');
         })
-        document.querySelector('body').classList.remove('overlayShow')
     }
-
+    
     document.querySelector('.addToCart').addEventListener('click' , function(){
         document.querySelector('.modalWrapper').classList.add('show');
         resetContent();
@@ -67,6 +66,7 @@ function modalEvents(){
     document.querySelectorAll('.modalContent button').forEach(item=>{
         item.addEventListener('click' , function handleClick(){
             document.querySelector('.modalWrapper').classList.remove('show');
+            document.querySelector('body').classList.remove('overlayShow')
         })
     })
 

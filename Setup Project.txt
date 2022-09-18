@@ -1,0 +1,11 @@
+Hello Sir/Mam,
+
+I have made a github repository for this website and deployed it through github pages for convenience.
+
+https://github.com/mani-monga/JTG-task ( Repository Link )
+https://mani-monga.github.io/JTG-task/	( Deployed Link )
+
+
+Thanks,
+Mani Monga
+( https://portfolio-mani.web.app/ )

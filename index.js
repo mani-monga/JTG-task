@@ -1,49 +1,75 @@
-let modalAddToCartHtml = `
-        <img src="./Assets/icons/Cart.svg" alt="Cart">
-        <div class="modalContentInfo">
-            <h4>Cart is Empty</h4>
-            <span>Add some items to the cart to checkout</span>
-        </div>
-        <button class="closeModal">Back To Menu</button>`
+let modalAddToCartHtml = `<img src="./Assets/icons/Cart.svg" alt="Cart">
+<div class="modalContentInfo">
+    <h4>Cart is Empty</h4>
+    <span>Add some items to the cart to checkout</span>
+</div>
+<button class="closeModal">Back To Menu</button>
+        `
 
 
-let requestDishHtml = `
-<div class="requestDish">
-    <h4>Request a Dish</h4>
-    <div class="inputContainer">
-        <div class="modalInputWrapper">
-            <label for="dishName">Name*</label>
-            <input name="dishName" type="text" placeholder="Enter name of the dish">
-        </div>
-        <div class="modalInputWrapper">
-            <label for="ImageUrl">Upload an image</label>
-            <input name="ImageUrl" type="text" placeholder="Paste a URL">
-        </div>
+let requestDishHtml = `<div class="requestDish">
+<h4>Request a Dish</h4>
+<div class="inputContainer">
+    <div class="modalInputWrapper">
+        <label for="dishName">Name*</label>
+        <input name="dishName" type="text" placeholder="Enter name of the dish">
     </div>
-    <div class="modalBtnGrp">
-        <button class="closeModal" id="cancelSubmit">Cancel</button>
-        <button id="Submit">Submit Request</button>
+    <div class="modalInputWrapper">
+        <label for="ImageUrl">Upload an image</label>
+        <input name="ImageUrl" type="text" placeholder="Paste a URL">
     </div>
-</div>`
+</div>
+<div class="modalBtnGrp">
+    <button class="closeModal" id="cancelSubmit">Cancel</button>
+    <button id="Submit">Submit Request</button>
+</div>
+</div>
+`
 function modalEvents(){
 
-    jQuery(document).on('click' , '.RequestDishCTA button' , function(){
-        jQuery('.modalWrapper').fadeIn(300);
-        jQuery('.modalContent').html(requestDishHtml)
-        jQuery('body').addClass('overlayShow');
+    // jQuery(document).on('click' , '.RequestDishCTA button' , function(){
+    //     jQuery('.modalWrapper').fadeIn(300);
+    //     jQuery('.modalContent').html(requestDishHtml)
+    //     jQuery('body').addClass('overlayShow');
+    // })
+    // jQuery(document).on('click' , '.addToCart' , function(){
+    //     jQuery('.modalWrapper').fadeIn(300);
+    //     jQuery('.modalContent').html(modalAddToCartHtml)
+    //     jQuery('body').addClass('overlayShow');
+    // })
+    // jQuery(document).on('click' , '.modalContent button' , function(){
+    //     jQuery('.modalWrapper').fadeOut(300);
+    //     jQuery('.modalContent').empty();
+    //     jQuery('body').removeClass('overlayShow');
+    // })
+
+    function resetContent(){
+        document.querySelectorAll('.modalContent div').forEach(function(item){
+            item.classList.remove('active');
+        })
+    }
+
+    document.querySelector('.addToCart').addEventListener('click' , function(){
+        document.querySelector('.modalWrapper').classList.add('show');
+        resetContent();
+        document.querySelector('.addToCartWrapper').classList.add('active')
     })
-    jQuery(document).on('click' , '.addToCart' , function(){
-        jQuery('.modalWrapper').fadeIn(300);
-        jQuery('.modalContent').html(modalAddToCartHtml)
-        jQuery('body').addClass('overlayShow');
+
+    document.querySelector('.RequestDishCTA button').addEventListener('click' , function(){
+        document.querySelector('.modalWrapper').classList.add('show');
+        resetContent();
+        document.querySelector('.requestDish').classList.add('active')
     })
-    jQuery(document).on('click' , '.modalContent button' , function(){
-        jQuery('.modalWrapper').fadeOut(300);
-        jQuery('.modalContent').empty();
-        jQuery('body').removeClass('overlayShow');
+    
+    document.querySelectorAll('.modalContent button').forEach(item=>{
+        item.addEventListener('click' , function handleClick(){
+            document.querySelector('.modalWrapper').classList.remove('show');
+        })
     })
 
 }
+
+
 
 function carouselEvents(){
 

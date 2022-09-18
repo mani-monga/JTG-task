@@ -28,17 +28,17 @@ let requestDishHtml = `
 function modalEvents(){
 
     jQuery(document).on('click' , '.RequestDishCTA button' , function(){
-        jQuery('.modalWrapper').fadeIn(500);
+        jQuery('.modalWrapper').fadeIn(300);
         jQuery('.modalContent').html(requestDishHtml)
         jQuery('body').addClass('overlayShow');
     })
     jQuery(document).on('click' , '.addToCart' , function(){
-        jQuery('.modalWrapper').fadeIn(500);
+        jQuery('.modalWrapper').fadeIn(300);
         jQuery('.modalContent').html(modalAddToCartHtml)
         jQuery('body').addClass('overlayShow');
     })
     jQuery(document).on('click' , '.modalContent button' , function(){
-        jQuery('.modalWrapper').fadeOut(500);
+        jQuery('.modalWrapper').fadeOut(300);
         jQuery('.modalContent').empty();
         jQuery('body').removeClass('overlayShow');
     })

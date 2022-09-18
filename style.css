@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     -webkit-tap-highlight-color: transparent;
+    cursor:default;
 }
 body.overlayShow{
     height: 100vh;
@@ -60,7 +61,13 @@ input:focus , #userMessage:focus{
     display: flex;
     gap: 35px;
 }
-
+.navbarRight img{
+    transition: 0.5s;
+}
+.navbarRight img:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
 .navbarRight svg {
     color: white;
     font-weight: 900;
@@ -496,6 +503,10 @@ footer{
 }
 .footerSection .footerList ul li{
     list-style: none;
+}
+
+.footerSocialLinks img{
+    cursor: pointer;
 }
 /* Modal Overlay */
 

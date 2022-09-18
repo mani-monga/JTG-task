@@ -46,18 +46,21 @@ function modalEvents(){
     function resetContent(){
         document.querySelectorAll('.modalContent div').forEach(function(item){
             item.classList.remove('active');
+            document.querySelector('body').classList.remove('overlayShow')
         })
     }
 
     document.querySelector('.addToCart').addEventListener('click' , function(){
         document.querySelector('.modalWrapper').classList.add('show');
         resetContent();
+        document.querySelector('body').classList.add('overlayShow')
         document.querySelector('.addToCartWrapper').classList.add('active')
     })
-
+    
     document.querySelector('.RequestDishCTA button').addEventListener('click' , function(){
         document.querySelector('.modalWrapper').classList.add('show');
         resetContent();
+        document.querySelector('body').classList.add('overlayShow')
         document.querySelector('.requestDish').classList.add('active')
     })
     

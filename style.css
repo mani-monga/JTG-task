@@ -5,7 +5,6 @@
     margin: 0;
     padding: 0;
     -webkit-tap-highlight-color: transparent;
-    cursor:default;
     scroll-behavior: smooth;
 }
 body.overlayShow{
@@ -44,6 +43,7 @@ input:focus , #userMessage:focus{
     line-height: 20px;
     letter-spacing: -0.012em;
     text-align: left;
+    cursor: pointer;
 }
 .navbarList ul{
     display: flex;
@@ -279,6 +279,7 @@ div.ItemCookingTime span{
     border: 3px solid #1AC073;
     border-radius: 50%;
     transition: 0.5s;
+    cursor: pointer;
 }
 .menuCarouselPopular > button svg{
     color: #1AC073;
@@ -311,10 +312,11 @@ div.ItemCookingTime span{
 .prevSlide svg{
     padding-right: 1px;
 }
-
+.MenuItemCard:hover{
+    cursor: pointer;
+}
 .menuCaouselItemWrapper .MenuItemCard:hover{
     filter: drop-shadow(0px 6px 20px rgba(0, 0, 0, 0.14));
-    cursor: default;
 }
 .RequestDishCTA{
    text-align: center;
@@ -389,6 +391,7 @@ div.ItemCookingTime span{
     width: 100px;
     height: 100px;
     z-index: 1;
+    cursor: pointer;
 }
 
 .videoContentWrapper video{
@@ -558,6 +561,7 @@ footer{
     line-height: 20px;
     letter-spacing: -0.012em;
     margin-bottom: 14px;
+    cursor: default;
 }
 
 .modalContent span{

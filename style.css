@@ -284,20 +284,19 @@ div.ItemCookingTime span{
     transform:scale(3.5);
     transition: 0.5s;
 }
-.menuCarouselPopular > button.disable{
-    cursor: not-allowed;
-    
-}
-.menuCarouselPopular > button.disable svg{
-    color: #1AC073;
-}
 .menuCarouselPopular > button:hover{
     background-color: #1AC073;
     border-color: #1AC073;
 }
 .menuCarouselPopular > button:hover svg{
     color: white;
-    
+}
+.menuCarouselPopular > button.disable{
+    cursor: not-allowed;
+}
+.menuCarouselPopular > button.disable svg{
+    cursor: not-allowed;
+    pointer-events: none;
 }
 .prevSlide{
     left: 8%;
